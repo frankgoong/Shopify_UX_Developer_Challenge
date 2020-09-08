@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section id="global"> <!--this is the background container-->
+      <h1 id="header">The Shoppies</h1> <!--this is "The shoppies"-->
+      <section id="searchDiv"> <!--this is the search card-->
+        <div id="searchBoxGroup">
+          <h4 id="movieTitle">Movie title</h4>
+          <label for="searchbox"></label>
+          <input type="text" id="searchbox" aria-describedby="searchbox" placeholder="Search Here">
+        </div>
+      </section> <!--search card end-->
+      <section class="row"> <!--this is the result list + nominations container-->
+        <div id="root" class="column"> <!--result list card-->
+          <h3 id="results">Results for</h3>
+          <div class="divider"></div>
+          <!--JAVASCRIPT INSERT-->
+        </div>
+        <div id="clone" class="column"> <!--nominations card-->
+          <h3>Nominations</h3>
+          <h5 id="count"></h5>
+          <div class="divider"></div>
+          <div id="emptyNoti">
+            <img class="icon" src="iconInfo.png">
+            <p class="notiText">Nominate movies from search results</p>
+            <img class="dismiss" src="dismiss.png">
+          </div>
+          <div id="successNoti">
+            <img class="icon" src="iconSuccess.png">
+            <p class="notiText">You have nominated 5 movies!</p>
+            <img class="dismiss" src="dismiss.png">
+          </div>
+          <div id="nominations" class="container"></div>
+          <button id="submitBtn" disabled>Submit</button>
+            <!--JAVASCRIPT INSERT-->
+        </div>
+      </section> <!--result list + nominations container end-->
+    </section>
+    <script src="scripts.js"></script>
+  </body>
+</html>
