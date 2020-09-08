@@ -57,8 +57,6 @@ function getResult(){
       if(document.getElementById("nominations").childElementCount == 0) {
         var emptyNoti = document.getElementById("emptyNoti")
         emptyNoti.setAttribute("style", "display: flex; align-items: center;");
-      } else {
-        emptyNoti.setAttribute("style", "display: none")
       }
 
       //if the nomination button is clicked:
@@ -72,7 +70,9 @@ function getResult(){
         count.innerHTML = "Complete " + correction + "/5";
         console.log(correction)
 
-        emptyNoti.setAttribute("style", "display: none")
+        if(emptyNoti != null) {
+          emptyNoti.setAttribute("style", "display: none") //bug
+        }
         //disble the button if clicked to avoid repeat
         b.disabled = true
         //add the nominated card from card container to the "clone" div in html
