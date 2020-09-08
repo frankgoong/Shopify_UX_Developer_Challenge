@@ -24,9 +24,15 @@ function getResult(){
 
   request.onload = function () {
     let response = JSON.parse(this.response);
+
+    let filterList = response.Search;
+    console.log(filterList) //check
+
+    let filteredList = filterList.filter(function(item){return item.Type == "movie";});
+
     console.log(response.Search.length);
 
-    response.Search.forEach((mo,index) => {
+    filteredList.forEach((mo,index) => {
 
       //console for testing
       console.log(mo.Title)
